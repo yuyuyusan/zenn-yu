@@ -123,7 +123,8 @@ width: min(100% - $calc, $width);
 @include contentsBody($calc: 100px, $width: 1000px);
 ```
 
-👆 は`max-width`が1000pxでブラウザ幅が1000px以下になったら左右50pxずつ余白ができます。
+👆 は`max-width`が1000px
+ブラウザ幅が1000px以下になったら左右50pxずつ余白ができます。
 
 ![](/images/convenient-modern-css/img-02.png)
 
