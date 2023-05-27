@@ -1,5 +1,5 @@
 ---
-title: 'ちょっとモダンで便利なCSS'
+title: 'ちょっとモダンで便利で楽なCSS'
 emoji: '😘'
 type: 'tech' # tech: 技術記事 / idea: アイデア
 topics: [CSS]
@@ -67,7 +67,7 @@ $black: #000;
   font-size: 16px;
 }
 ```
-`$sp`つまり560pxからメディアクエリです。
+`$sp`の値560pxからメディアクエリです。
 
 -----
 
@@ -182,5 +182,6 @@ place-content: center;
 
 ## まとめ
 プログラムみたいな`SCSS`がこれ以上増えると管理しづらく、パッと見でわからなくなるので、もう増やさないと思います。
-今はTailWind、CSS in JS、emotion とかいっぱいあるので、
-SCSSの優位性はほとんど感じていません。
+今はTailWind、CSS in JS、emotion とかいっぱいあり、CSSもネストができるようになりました。
+現在は、TailWindを使用し始めたり、Nextを勉強中で、CSS in ModulesとTailWindを採用していて、
+正直SCSSの優位性はほとんど感じていません。
