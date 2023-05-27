@@ -6,14 +6,15 @@ topics: [CSS]
 published: true
 ---
 
-数年前まではアナログな書き方しかできなかったものを、楽に完結できるようになったものをまとめました。
+数年前まではアナログな書き方しかできなかったものを、楽に完結できるようになったもの、普段使用しているものをまとめました。
 
 # SCSS
 
 ```scss:_variable.scss
+// width
 $pc-s: 1200px;
 $sp: 560px;
-
+// color
 $black: #000;
 ```
 
@@ -49,7 +50,6 @@ $black: #000;
   background: rgba($black, .7);
   .text {
     font-size: 32px;
-    // media query 上の変数 560px
     @include sp {
       font-size: 16px;
     }
@@ -57,11 +57,17 @@ $black: #000;
 }
 ```
 
-## 説明
+## SCSS各説明
 
 ### @include sp
 
 - メディアクエリを短くしたいので採用
+```css:style.css
+@include sp {
+  font-size: 16px;
+}
+```
+`$sp`つまり560pxからメディアクエリです。
 
 -----
 
@@ -79,7 +85,22 @@ background: rgba(0,0,0,.7);
 `margin`のY軸、つまり上下の余白です。
 デフォルト値は40pxにしています。
 条件を満たす場合、入力値の50%にしています。
+```scss:_mixin.scss
+@mixin marginY($value: 40px) {
+  margin: $value 0;
+  @if ($value > 60px) {
+    @include sp {
+      margin: calc($value / 2) 0;
+    }
+  }
+}
 
+@include marginY($value: 100px);
+```
+
+:::message
+100pxの場合 ブラウザ幅560pxで **100px / 2 = 50px**
+:::
 -----
 
 ### contentsBody
@@ -136,7 +157,7 @@ width: min(100% - $calc, $width);
 }
 ```
 
-## 説明
+## CSSの各説明
 
 ### gap
 ```css:style.css
@@ -155,7 +176,10 @@ place-content: center;
 何かを真ん中にしたい時に使用します。
 - `inset` などのやり方もあると思いますが、👆を使用
 
+### aspect-ratio
+- 比率 1:1
+
 ## まとめ
-プログラムみたいなSCSSがこれ以上増えると管理しづらく、パッと見でわからなくなるので、もう増やさないと思います。
+プログラムみたいな`SCSS`がこれ以上増えると管理しづらく、パッと見でわからなくなるので、もう増やさないと思います。
 今はTailWind、CSS in JS、emotion とかいっぱいあるので、
 SCSSの優位性はほとんど感じていません。
