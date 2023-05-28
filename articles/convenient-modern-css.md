@@ -180,7 +180,6 @@ place-content: center;
 ```
 
 何かを真ん中にしたい時に使用します。
-- `inset` などのやり方もあると思いますが、👆を使用
 
 ### aspect-ratio
 - 比率 1:1
