@@ -6,7 +6,13 @@ topics: [CSS]
 published: true
 ---
 
-数年前まではアナログな書き方しかできなかったものを、楽に完結できるようになったもの、普段使用していて、便利だと思うものをまとめました。
+めんどくさい書き方しかできなかったものが、現在は、簡単に完結できるようになったものが増えました。
+普段使用していて、利用しているものをまとめました。
+
+# モダンとは
+
+- レガシーの反対
+- ある時点から新しいもの
 
 # SCSS
 
@@ -62,6 +68,7 @@ $black: #000;
 ### @include sp
 
 - `@media~~`を短くしたいので採用
+
 ```scss
 $sp: 560px;
 .text {
@@ -71,12 +78,16 @@ $sp: 560px;
   }
 }
 ```
+
 `$sp`の値から`font-size`が`16px`になります。
 
 -----
 
 ### background
+
 ```scss
+$black: #000;
+
 background: rgba($black, .7);
 /* 👆が👇になる */
 background: rgba(0,0,0,.7);
@@ -89,6 +100,7 @@ background: rgba(0,0,0,.7);
 `margin`のY軸、つまり上下の余白です。
 デフォルト値は40pxにしています。
 条件を満たす場合、入力値の50%にしています。
+
 ```scss:_mixin.scss
 @mixin marginY($value: 40px) {
   margin: $value 0;
@@ -98,8 +110,6 @@ background: rgba(0,0,0,.7);
     }
   }
 }
-
-@include marginY($value: 100px);
 ```
 
 -----
@@ -135,8 +145,8 @@ width: min(100% - $calc, $width);
 
 # CSS
 
+👇 のようなレイアウトの場合
 ![](/images/convenient-modern-css/img-01.png)
-👆 のようなレイアウトの場合
 
 ```html:index.html
 <div class="container">
@@ -184,8 +194,27 @@ place-content: center;
 ### aspect-ratio
 - 比率 1:1
 
-## まとめ
-プログラムみたいな`SCSS`がこれ以上増えると管理しづらく、パッと見でわからなくなるので、もう増やさないと思います。
+## その他
+```css
+a {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+```
+```css
+:root {
+  --shadow: 2px 2px 10px rgba(0,0,0,.2);
+}
+.boxshadow {
+  boxshadow: var(--shadow);
+}
+```
+
+## 最近（2023.5時点）のCSSの流れ
+Tailwindがやはりマストの感じはします。Twitterでもトレンドにあがりますし、一時Bulmaなども名前見たような気がしましたが、気づいたら一強な感じになっていますね。
+SCSSに関しては、基本的に増えると管理しづらいので、`mixin`がこれ以上増やすのは考えていません。
 今はTailWind、CSS in JS、emotion とかいっぱいあり、CSSもネストができるようになりました。
-現在は、TailWindを使用し始めたり、Nextを勉強中で、CSS in ModulesとTailWindを採用していて、
-正直SCSSの優位性はほとんど感じていません。
+
+現在は、Tailwindを使用し始めたり、Nextを勉強中で、CSS in ModulesとTailwindを採用していて、
+正直SCSSの優位性はほとんど感じていないのが本音です。
