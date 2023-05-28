@@ -1,12 +1,12 @@
 ---
-title: 'ちょっとモダンで便利で楽なCSS'
+title: 'ちょっとモダンなCSS'
 emoji: '😘'
 type: 'tech' # tech: 技術記事 / idea: アイデア
 topics: [CSS]
 published: true
 ---
 
-数年前まではアナログな書き方しかできなかったものを、楽に完結できるようになったもの、普段使用しているものをまとめました。
+数年前まではアナログな書き方しかできなかったものを、楽に完結できるようになったもの、普段使用していて、便利だと思うものをまとめました。
 
 # SCSS
 
@@ -61,18 +61,22 @@ $black: #000;
 
 ### @include sp
 
-- メディアクエリを短くしたいので採用
-```css:style.css
-@include sp {
-  font-size: 16px;
+- `@media~~`を短くしたいので採用
+```scss
+$sp: 560px;
+.text {
+  font-size: 20px;  
+  @include sp {
+    font-size: 16px;  
+  }
 }
 ```
-`$sp`の値560pxからメディアクエリです。
+`$sp`の値から`font-size`が`16px`になります。
 
 -----
 
 ### background
-```css:style.css
+```scss
 background: rgba($black, .7);
 /* 👆が👇になる */
 background: rgba(0,0,0,.7);
@@ -98,9 +102,6 @@ background: rgba(0,0,0,.7);
 @include marginY($value: 100px);
 ```
 
-:::message
-100pxの場合 ブラウザ幅560pxで **100px / 2 = 50px**
-:::
 -----
 
 ### contentsBody
@@ -109,7 +110,7 @@ background: rgba(0,0,0,.7);
 - `$calc`のデフォルト値は100px
 - `$width`のデフォルト値は`variable.scss`ファイルで定義した`$pc-s`の値
 
-```scss:_mixin.scss
+```scss
 width: min(100% - $calc, $width);
 ```
 
@@ -120,11 +121,15 @@ width: min(100% - $calc, $width);
 -----
 #### 例
 ```scss:_hoge-page.scss
-@include contentsBody($calc: 100px, $width: 1000px);
+.container {
+  @include contentsBody($calc: 100px, $width: 1000px);
+  @include marginY($value: 100px);
+}
 ```
 
-👆 は`max-width`が1000px
-ブラウザ幅が1000px以下になったら左右50pxずつ余白ができます。
+👆の`container`は`max-width`が1000px
+ブラウザ幅が1000px以下になると左右に50pxずつ余白ができます。
+上下`margin`が100px ブラウザ幅が`$sp`の値になると50px
 
 ![](/images/convenient-modern-css/img-02.png)
 
