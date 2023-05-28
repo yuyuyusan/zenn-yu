@@ -84,7 +84,7 @@ background: rgba(0,0,0,.7);
 
 -----
 
-### marginY
+### @marginY
 
 `margin`のY軸、つまり上下の余白です。
 デフォルト値は40pxにしています。
@@ -104,7 +104,7 @@ background: rgba(0,0,0,.7);
 
 -----
 
-### contentsBody
+### @contentsBody
 
 コンテンツやセクションなどの幅に使用しています。
 - `$calc`のデフォルト値は100px
