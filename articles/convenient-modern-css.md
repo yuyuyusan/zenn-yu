@@ -123,13 +123,13 @@ width: min(100% - $calc, $width);
 ```scss:_hoge-page.scss
 .container {
   @include contentsBody($calc: 100px, $width: 1000px);
-  @include marginY($value: 100px);
+  @include marginY($value: 200px);
 }
 ```
 
 👆の`container`は`max-width`が1000px
 ブラウザ幅が1000px以下になると左右に50pxずつ余白ができます。
-上下`margin`が100px ブラウザ幅が`$sp`の値になると50px
+上下`margin`が200px ブラウザ幅が`$sp`の値になると100px
 
 ![](/images/convenient-modern-css/img-02.png)
 
