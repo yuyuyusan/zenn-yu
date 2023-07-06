@@ -149,12 +149,15 @@ const gnavItems: GnavItem[] = [
   margin: 0 auto;
 }
 </style>
+
 ```
+
+## ルーティング
 ファイルベースのルーティングがサポートされているため、
 `/src/pages/about.astro`を作成すると静的ページのルーティングができます。
 
 @[card](https://docs.astro.build/ja/core-concepts/routing/)
-### scss
+### SCSS導入
 ```
 npm install sass
 ```
@@ -183,6 +186,8 @@ export default defineConfig({
 });
 
 ```
+
+## 画像
 
 `/public/images/`フォルダを作成。
 
