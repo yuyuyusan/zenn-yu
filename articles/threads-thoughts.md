@@ -3,7 +3,7 @@ title: "Threads所感"
 emoji: "😀"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: [Threads]
-published: true
+published: false
 ---
 
 ## 話題のThreads
@@ -36,4 +36,4 @@ iframeは拒否された
 
 あくまで、Threads in Instagramって感じなので、Instagramアカウント連携が前提です。
 まだまだ改善はされそうな気がしますが、一時的な過熱にならないなら使っていこうと思います。
-新たなSNSの登場の感じはする。
+新たなSNSの登場の感じはちょっとする。
