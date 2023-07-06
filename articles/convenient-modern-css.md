@@ -62,7 +62,7 @@ $black: #000;
 }
 ```
 
-## SCSS各説明
+## SCSS 各説明
 
 ### @include sp
 
@@ -71,34 +71,34 @@ $black: #000;
 ```scss
 $sp: 560px;
 .text {
-  font-size: 20px;  
+  font-size: 20px;
   @include sp {
-    font-size: 16px;  
+    font-size: 16px;
   }
 }
 ```
 
 `$sp`の値から`font-size`が`16px`になります。
 
------
+---
 
 ### background
 
 ```scss
 $black: #000;
 
-background: rgba($black, .7);
+background: rgba($black, 0.7);
 /* 👆が👇になる */
-background: rgba(0,0,0,.7);
+background: rgba(0, 0, 0, 0.7);
 ```
 
------
+---
 
 ### @marginY
 
-`margin`のY軸、つまり上下の余白です。
-デフォルト値は40pxにしています。
-条件を満たす場合、入力値の50%にしています。
+`margin`の Y 軸、つまり上下の余白です。
+デフォルト値は 40px にしています。
+条件を満たす場合、入力値の 50%にしています。
 
 ```scss:_mixin.scss
 @mixin marginY($value: 40px) {
@@ -111,12 +111,13 @@ background: rgba(0,0,0,.7);
 }
 ```
 
------
+---
 
 ### @contentsBody
 
 コンテンツやセクションなどの幅に使用しています。
-- `$calc`のデフォルト値は100px
+
+- `$calc`のデフォルト値は 100px
 - `$width`のデフォルト値は`variable.scss`ファイルで定義した`$pc-s`の値
 
 ```scss
@@ -125,10 +126,13 @@ width: min(100% - $calc, $width);
 
 👆 は`$width`が `max-width` です。
 :::message
-ブラウザ幅が`$width`以下になった場合100%から`$calc`を引いた幅になります。
+ブラウザ幅が`$width`以下になった場合 100%から`$calc`を引いた幅になります。
 :::
------
+
+---
+
 #### 例
+
 ```scss:_hoge-page.scss
 .container {
   @include contentsBody($calc: 100px, $width: 1000px);
@@ -136,9 +140,9 @@ width: min(100% - $calc, $width);
 }
 ```
 
-👆の`container`は`max-width`が1000px
-ブラウザ幅が1000px以下になると左右に50pxずつ余白ができます。
-上下`margin`が200px ブラウザ幅が`$sp`の値になると100px
+👆 の`container`は`max-width`が 1000px
+ブラウザ幅が 1000px 以下になると左右に 50px ずつ余白ができます。
+上下`margin`が 200px ブラウザ幅が`$sp`の値になると 100px
 
 ![](/images/convenient-modern-css/img-02.png)
 
@@ -155,6 +159,7 @@ width: min(100% - $calc, $width);
   <!-- 省略 -->
 </div>
 ```
+
 ```css:style.css
 .container {
   display: flex;
@@ -172,17 +177,21 @@ width: min(100% - $calc, $width);
 }
 ```
 
-## CSSの各説明
+## CSS の各説明
 
 ### gap
+
 ```css:style.css
 width: calc((100% - (60px * 2)) / 3);
 ```
+
 `inner`が何個になるかわからないときなどに使用します。
-- 60pxは`gap`と合わせ、3カラムの場合はガターが 2つなので、`gap`\*2 をする
-- 120pxが引かれるので、それを三分割で3カラムの出来上がり
+
+- 60px は`gap`と合わせ、3 カラムの場合はガターが 2 つなので、`gap`\*2 をする
+- 120px が引かれるので、それを三分割で 3 カラムの出来上がり
 
 ### grid
+
 ```css:style.css
 display: grid;
 place-content: center;
@@ -191,9 +200,11 @@ place-content: center;
 何かを真ん中にしたい時に使用します。
 
 ### aspect-ratio
+
 - 比率 1:1
 
 ## その他
+
 ```css
 a {
   display: block;
@@ -201,19 +212,28 @@ a {
   margin: 0 auto;
 }
 ```
+
 ```css
 :root {
-  --shadow: 2px 2px 10px rgba(0,0,0,.2);
+  --shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 .boxshadow {
   boxshadow: var(--shadow);
 }
 ```
 
-## 最近（2023.5時点）のCSSの流れ
-Tailwindがやはりマストの感じはします。Twitterでもトレンドにあがりますし、一時Bulmaなども名前見たような気がしましたが、気づいたら一強な感じになっていますね。
-SCSSに関しては、基本的に増えると管理しづらいので、`mixin`がこれ以上増やすのは考えていません。
-今はTailWind、CSS in JS、emotion とかいっぱいあり、CSSもネストができるようになりました。
+```css
+.text {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+```
 
-現在は、Tailwindを使用し始めたり、Nextを勉強中で、CSS in ModulesとTailwindを採用していて、
-正直SCSSの優位性はほとんど感じていないのが本音です。
+## 最近（2023.5 時点）の CSS の流れ
+
+Tailwind がやはりマストの感じはします。Twitter でもトレンドにあがりますし、一時 Bulma なども名前見たような気がしましたが、気づいたら一強な感じになっていますね。
+SCSS に関しては、基本的に増えると管理しづらいので、`mixin`がこれ以上増やすのは考えていません。
+今は TailWind、CSS in JS、emotion とかいっぱいあり、CSS もネストができるようになりました。
+
+現在は、Tailwind を使用し始めたり、Next を勉強中で、CSS in Modules と Tailwind を採用していて、
+正直 SCSS の優位性はほとんど感じていないのが本音です。
