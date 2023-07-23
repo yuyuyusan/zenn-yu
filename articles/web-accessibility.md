@@ -2,12 +2,12 @@
 title: "Webアクセシビリティをエンジニアだけで対応したい"
 emoji: "👀"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: [accessibility,HTML]
-published: false
+topics: [accessibility,HTML,アクセシビリティ]
+published: true
 ---
 
 ## はじめに
-アクセシビリティの簡単な概要、技術者だけで対応したところを更新してきます。
+アクセシビリティの簡単な概要、技術者だけで対応したところを更新していきます。
 
 ## Webアクセシビリティとは
 
@@ -27,9 +27,7 @@ https://www.digital.go.jp/resources/introduction-to-web-accessibility-guidebook/
 
 ## 一人で対応できるところ
 対応できていた部分もありましたが、盲点だった部分もありました。
-:::message
-[デジタル庁PDF参照](https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/08ed88e1-d622-43cb-900b-84957ab87826/9f89625f/20230512_introduction_to_weba11y.pdf)
-:::
+[デジタル庁PDF](https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/08ed88e1-d622-43cb-900b-84957ab87826/9f89625f/20230512_introduction_to_weba11y.pdf)参照
 
 ### 自動再生はさせない
 videoタグYoutubeなどの動画や、音声データなどですね。
