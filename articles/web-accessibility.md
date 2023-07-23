@@ -7,7 +7,7 @@ published: true
 ---
 
 ## はじめに
-アクセシビリティの簡単な概要、技術者だけで対応したところを更新していきます。
+アクセシビリティの簡単な概要、[デジタル庁PDF](https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/08ed88e1-d622-43cb-900b-84957ab87826/9f89625f/20230512_introduction_to_weba11y.pdf)を参考に対応したものを更新していきます。
 
 ## Webアクセシビリティとは
 
@@ -25,7 +25,7 @@ https://www.digital.go.jp/resources/introduction-to-web-accessibility-guidebook/
 
 公的機関などに求められるのはAAとのことです。
 
-## 一人で対応できるところ
+## 対応できるところ
 対応できていた部分もありましたが、盲点だった部分もありました。
 [デジタル庁PDF](https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/08ed88e1-d622-43cb-900b-84957ab87826/9f89625f/20230512_introduction_to_weba11y.pdf)参照
 
@@ -110,7 +110,7 @@ Tabキーでのフォーカス
 ## 余談
 [デジタル庁](https://www.digital.go.jp/)と[こども家庭庁](https://www.cfa.go.jp/top/)は同じレイアウトでモダンな技術を使用。
 さらに、新しくベータ版みたいなサイトもデジタル庁はあり、力を入れ始めている感覚はあります。
-また、「**Webアクセシビリティの義務化**」についても最近は目にします。
+また、「**Webアクセシビリティの義務化**」についても最近は目にしますので、注力していきたいです。
 
 ## 参考
 [Youtube](https://www.youtube.com/watch?v=r9yn6c4mNe0)
