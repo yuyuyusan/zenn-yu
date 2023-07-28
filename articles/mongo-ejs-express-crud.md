@@ -1,6 +1,6 @@
 ---
 title: "【入門】mongoDB,EJS,ExpressでCRUD操作"
-emoji: "💬"
+emoji: "🌿"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [mongoDB,EJS,Express]
 published: false

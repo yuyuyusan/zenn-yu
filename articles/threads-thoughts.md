@@ -1,6 +1,6 @@
 ---
 title: "Threads所感"
-emoji: "😀"
+emoji: "🌿"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: [Threads]
 published: false

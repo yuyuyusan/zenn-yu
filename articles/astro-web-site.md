@@ -1,6 +1,6 @@
 ---
 title: 'Astroを使い、静的サイトを作成してみました'
-emoji: '😎'
+emoji: '🌿'
 type: 'tech' # tech: 技術記事 / idea: アイデア
 topics: [astro]
 published: true
